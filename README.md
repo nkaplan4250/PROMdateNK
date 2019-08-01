@@ -9,12 +9,11 @@ Last commit: Mar 10, 2017
 Both of which were downloaded to a Linux VM that was setup for use and testing of the PROMdate I was building.   
 It contains everything I needed or thought I might, which may or may not have turned out to be true.  
 
-I have added support of AtMega328P (as of March 2019) 
-and added Resources and Documentation folders which contain some additional instructions for  
-using of the PROMdate   
+I have added support of ATMega328P  
+and added folders which contain some additional instructions for using of the PROMdate   
 (though these maybe specific to my VM which i would be happy to share just make a pull request or something)  
 
-### [Read it here](Resources/Documentation/PROMdate_instructions.md)  
+### [View Instructions](Resources/Documentation/PROMdate_instructions.md)  
 
 Thank you so much to 0x0dada _(whoever you are)_,  
 Tramell Hudson,  
