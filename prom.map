@@ -1,0 +1,793 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+                              prom.o (__divmodhi4)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+                              usb_serial.o (__tablejump2__)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+                              prom.o (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+                              prom.o (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+                              /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ .text          0x0000000000000000        0x0 prom.o
+ .text.send_mem_str
+                0x0000000000000000       0x18 prom.o
+ .text          0x0000000000000000        0x0 chips.o
+ .data          0x0000000000000000        0x0 chips.o
+ .bss           0x0000000000000000        0x0 chips.o
+ .text          0x0000000000000000        0x0 bits.o
+ .data          0x0000000000000000        0x0 bits.o
+ .bss           0x0000000000000000        0x0 bits.o
+ .text          0x0000000000000000        0x0 xmodem.o
+ .data          0x0000000000000000        0x0 xmodem.o
+ .bss           0x0000000000000000        0x0 xmodem.o
+ .text          0x0000000000000000        0x0 usb_serial.o
+ .text.usb_serial_putchar_nowait
+                0x0000000000000000       0x40 usb_serial.o
+ .text.usb_serial_flush_output
+                0x0000000000000000       0x20 usb_serial.o
+ .text.usb_serial_get_baud
+                0x0000000000000000       0x12 usb_serial.o
+ .text.usb_serial_get_stopbits
+                0x0000000000000000        0x6 usb_serial.o
+ .text.usb_serial_get_paritytype
+                0x0000000000000000        0x6 usb_serial.o
+ .text.usb_serial_get_numbits
+                0x0000000000000000        0x6 usb_serial.o
+ .text.usb_serial_set_control
+                0x0000000000000000       0x56 usb_serial.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800100 0x000000000000ff00 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+LOAD prom.o
+LOAD chips.o
+LOAD bits.o
+LOAD xmodem.o
+LOAD usb_serial.o
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libat90usb1286.a
+END GROUP
+                0x0000000000020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                0x000000000000ff00                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xff00
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x18fa
+ *(.vectors)
+ .vectors       0x0000000000000000       0x98 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table.usb_serial_write
+                0x0000000000000098       0x82 usb_serial.o
+                0x000000000000011a                . = ALIGN (0x2)
+                0x000000000000011a                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000000000011a        0x0 linker stubs
+ *(.trampolines*)
+                0x000000000000011a                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+ .progmem.data  0x000000000000011a       0xb1 prom.o
+ .progmem.data  0x00000000000001cb        0x6 bits.o
+ .progmem.data  0x00000000000001d1       0xc9 usb_serial.o
+                0x000000000000029a                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000000029a                __ctors_start = .
+ *(.ctors)
+                0x000000000000029a                __ctors_end = .
+                0x000000000000029a                __dtors_start = .
+ *(.dtors)
+                0x000000000000029a                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000000029a        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+                0x000000000000029a                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000000029a        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000000000002a6       0x1a /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+                0x00000000000002a6                __do_copy_data
+ .init4         0x00000000000002c0       0x10 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+                0x00000000000002c0                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000002d0        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000002d6        0x2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+                0x00000000000002d6                __vector_22
+                0x00000000000002d6                __vector_28
+                0x00000000000002d6                __vector_1
+                0x00000000000002d6                __vector_32
+                0x00000000000002d6                __vector_34
+                0x00000000000002d6                __vector_24
+                0x00000000000002d6                __vector_12
+                0x00000000000002d6                __bad_interrupt
+                0x00000000000002d6                __vector_6
+                0x00000000000002d6                __vector_31
+                0x00000000000002d6                __vector_35
+                0x00000000000002d6                __vector_3
+                0x00000000000002d6                __vector_23
+                0x00000000000002d6                __vector_30
+                0x00000000000002d6                __vector_25
+                0x00000000000002d6                __vector_13
+                0x00000000000002d6                __vector_17
+                0x00000000000002d6                __vector_19
+                0x00000000000002d6                __vector_7
+                0x00000000000002d6                __vector_27
+                0x00000000000002d6                __vector_5
+                0x00000000000002d6                __vector_33
+                0x00000000000002d6                __vector_37
+                0x00000000000002d6                __vector_4
+                0x00000000000002d6                __vector_9
+                0x00000000000002d6                __vector_2
+                0x00000000000002d6                __vector_21
+                0x00000000000002d6                __vector_15
+                0x00000000000002d6                __vector_36
+                0x00000000000002d6                __vector_29
+                0x00000000000002d6                __vector_8
+                0x00000000000002d6                __vector_26
+                0x00000000000002d6                __vector_14
+                0x00000000000002d6                __vector_16
+                0x00000000000002d6                __vector_18
+                0x00000000000002d6                __vector_20
+                0x00000000000002d8                . = ALIGN (0x2)
+ *(.text.*)
+ .text.hexdigit
+                0x00000000000002d8        0xe prom.o
+ .text.prom_pin
+                0x00000000000002e6       0x26 prom.o
+ .text.prom_tristate
+                0x000000000000030c       0x28 prom.o
+ .text.isp_clock
+                0x0000000000000334       0x44 prom.o
+ .text.isp_write
+                0x0000000000000378       0x7e prom.o
+ .text.prom_setup
+                0x00000000000003f6      0x1ec prom.o
+ .text._prom_read
+                0x00000000000005e2       0x34 prom.o
+ .text.prom_list_send
+                0x0000000000000616      0x100 prom.o
+ .text.prom_read
+                0x0000000000000716       0xd6 prom.o
+ .text.send_str
+                0x00000000000007ec       0x1c prom.o
+                0x00000000000007ec                send_str
+ .text.startup.main
+                0x0000000000000808      0x5be prom.o
+                0x0000000000000808                main
+ .text.ddr      0x0000000000000dc6      0x158 bits.o
+                0x0000000000000dc6                ddr
+ .text.out      0x0000000000000f1e      0x15e bits.o
+                0x0000000000000f1e                out
+ .text.in       0x000000000000107c       0x4a bits.o
+                0x000000000000107c                in
+ .text.xmodem_send
+                0x00000000000010c6       0x5c xmodem.o
+                0x00000000000010c6                xmodem_send
+ .text.xmodem_init
+                0x0000000000001122       0x1e xmodem.o
+                0x0000000000001122                xmodem_init
+ .text.xmodem_fini
+                0x0000000000001140       0x24 xmodem.o
+                0x0000000000001140                xmodem_fini
+ .text.usb_wait_in_ready
+                0x0000000000001164        0xa usb_serial.o
+ .text.usb_init
+                0x000000000000116e       0x32 usb_serial.o
+                0x000000000000116e                usb_init
+ .text.usb_configured
+                0x00000000000011a0        0x6 usb_serial.o
+                0x00000000000011a0                usb_configured
+ .text.usb_serial_getchar
+                0x00000000000011a6       0x46 usb_serial.o
+                0x00000000000011a6                usb_serial_getchar
+ .text.usb_serial_available
+                0x00000000000011ec       0x34 usb_serial.o
+                0x00000000000011ec                usb_serial_available
+ .text.usb_serial_flush_input
+                0x0000000000001220       0x26 usb_serial.o
+                0x0000000000001220                usb_serial_flush_input
+ .text.usb_serial_putchar
+                0x0000000000001246       0x7e usb_serial.o
+                0x0000000000001246                usb_serial_putchar
+ .text.usb_serial_write
+                0x00000000000012c4      0x2c2 usb_serial.o
+                0x00000000000012c4                usb_serial_write
+ .text.usb_serial_get_control
+                0x0000000000001586        0x6 usb_serial.o
+                0x0000000000001586                usb_serial_get_control
+ .text.__vector_10
+                0x000000000000158c       0x74 usb_serial.o
+                0x000000000000158c                __vector_10
+ .text.__vector_11
+                0x0000000000001600      0x296 usb_serial.o
+                0x0000000000001600                __vector_11
+ .text.libgcc.div
+                0x0000000000001896       0x26 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+                0x0000000000001896                __divmodhi4
+                0x0000000000001896                _div
+ .text.libgcc   0x00000000000018bc       0x12 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+                0x00000000000018bc                __tablejump2__
+ .text.libgcc.div
+                0x00000000000018ce       0x28 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+                0x00000000000018ce                __udivmodhi4
+                0x00000000000018f6                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000000000018f6        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+                0x00000000000018f6                exit
+                0x00000000000018f6                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000000000018f6        0x4 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000000000018fa                _etext = .
+
+.data           0x0000000000800100      0x742 load address 0x00000000000018fa
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x2 prom.o
+ .data          0x0000000000800102        0x7 usb_serial.o
+ *(.data*)
+ *(.rodata)
+ .rodata        0x0000000000800109       0x29 prom.o
+ .rodata        0x0000000000800132      0x710 chips.o
+                0x0000000000800132                proms_count
+                0x0000000000800134                proms
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0000000000800842                . = ALIGN (0x2)
+                0x0000000000800842                _edata = .
+                0x0000000000800842                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800842       0x88
+                0x0000000000800842                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800842       0x84 prom.o
+ .bss           0x00000000008008c6        0x4 usb_serial.o
+ *(.bss*)
+ *(COMMON)
+                0x00000000008008ca                PROVIDE (__bss_end, .)
+                0x00000000000018fa                __data_load_start = LOADADDR (.data)
+                0x000000000000203c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00000000008008ca        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x00000000008008ca                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 prom.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 chips.o
+ .comment       0x0000000000000011       0x12 bits.o
+ .comment       0x0000000000000011       0x12 xmodem.o
+ .comment       0x0000000000000011       0x12 usb_serial.o
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x198
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x78 prom.o
+ .debug_aranges
+                0x0000000000000078       0x18 chips.o
+ .debug_aranges
+                0x0000000000000090       0x30 bits.o
+ .debug_aranges
+                0x00000000000000c0       0x30 xmodem.o
+ .debug_aranges
+                0x00000000000000f0       0xa8 usb_serial.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x3363
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x995 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ .debug_info    0x0000000000000995     0x1a64 prom.o
+ .debug_info    0x00000000000023f9      0x19c chips.o
+ .debug_info    0x0000000000002595      0x19d bits.o
+ .debug_info    0x0000000000002732      0x272 xmodem.o
+ .debug_info    0x00000000000029a4      0x9bf usb_serial.o
+
+.debug_abbrev   0x0000000000000000     0x1237
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x910 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ .debug_abbrev  0x0000000000000910      0x434 prom.o
+ .debug_abbrev  0x0000000000000d44       0x99 chips.o
+ .debug_abbrev  0x0000000000000ddd      0x105 bits.o
+ .debug_abbrev  0x0000000000000ee2      0x13c xmodem.o
+ .debug_abbrev  0x000000000000101e      0x219 usb_serial.o
+
+.debug_line     0x0000000000000000     0x1672
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ .debug_line    0x000000000000001a      0x848 prom.o
+ .debug_line    0x0000000000000862       0x51 chips.o
+ .debug_line    0x00000000000008b3      0x22b bits.o
+ .debug_line    0x0000000000000ade      0x157 xmodem.o
+ .debug_line    0x0000000000000c35      0xa3d usb_serial.o
+
+.debug_frame    0x0000000000000000      0x470
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x1fc prom.o
+ .debug_frame   0x00000000000001fc       0x44 bits.o
+ .debug_frame   0x0000000000000240       0x58 xmodem.o
+ .debug_frame   0x0000000000000298      0x1d8 usb_serial.o
+
+.debug_str      0x0000000000000000      0xb65
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x349 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+ .debug_str     0x0000000000000349      0x4ae prom.o
+                                        0x51c (size before relaxing)
+ .debug_str     0x00000000000007f7        0x8 chips.o
+                                        0x1b6 (size before relaxing)
+ .debug_str     0x00000000000007ff       0x12 bits.o
+                                        0x14d (size before relaxing)
+ .debug_str     0x0000000000000811       0x15 xmodem.o
+                                        0x1f3 (size before relaxing)
+ .debug_str     0x0000000000000826      0x33f usb_serial.o
+                                        0x576 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x2303
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0x12a3 prom.o
+ .debug_loc     0x00000000000012a3      0x37c bits.o
+ .debug_loc     0x000000000000161f      0x1e7 xmodem.o
+ .debug_loc     0x0000000000001806      0xafd usb_serial.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x330
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x1f8 prom.o
+ .debug_ranges  0x00000000000001f8       0x20 bits.o
+ .debug_ranges  0x0000000000000218       0x38 xmodem.o
+ .debug_ranges  0x0000000000000250       0xe0 usb_serial.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(prom.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+__FUSE_REGION_LENGTH__                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__bad_interrupt                                   /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__bss_end                                         /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+                                                  prom.o
+__do_clear_bss                                    /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+                                                  usb_serial.o
+                                                  prom.o
+__do_copy_data                                    /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+                                                  usb_serial.o
+                                                  chips.o
+                                                  prom.o
+__heap_end                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__init                                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__stack                                           /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__tablejump2__                                    /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_tablejump2.o)
+                                                  usb_serial.o
+__udivmodhi4                                      /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_udivmodhi4.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+__vector_1                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_10                                       usb_serial.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_11                                       usb_serial.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_12                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_13                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_14                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_15                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_16                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_17                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_18                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_19                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_2                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_20                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_21                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_22                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_23                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_24                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_25                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_26                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_27                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_28                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_29                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_3                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_30                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_31                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_32                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_33                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_34                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_35                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_36                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_37                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_4                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_5                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_6                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_7                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_8                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_9                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vector_default                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+__vectors                                         /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+_div                                              /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_divmodhi4.o)
+_exit                                             /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ddr                                               bits.o
+                                                  prom.o
+exit                                              /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+in                                                bits.o
+                                                  prom.o
+main                                              prom.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtat90usb1286.o
+out                                               bits.o
+                                                  prom.o
+proms                                             chips.o
+                                                  prom.o
+proms_count                                       chips.o
+                                                  prom.o
+send_mem_str                                      prom.o
+send_str                                          prom.o
+                                                  bits.o
+usb_configured                                    usb_serial.o
+                                                  prom.o
+usb_init                                          usb_serial.o
+                                                  prom.o
+usb_serial_available                              usb_serial.o
+                                                  prom.o
+usb_serial_flush_input                            usb_serial.o
+                                                  prom.o
+usb_serial_flush_output                           usb_serial.o
+usb_serial_get_baud                               usb_serial.o
+usb_serial_get_control                            usb_serial.o
+                                                  prom.o
+usb_serial_get_numbits                            usb_serial.o
+usb_serial_get_paritytype                         usb_serial.o
+usb_serial_get_stopbits                           usb_serial.o
+usb_serial_getchar                                usb_serial.o
+                                                  xmodem.o
+                                                  prom.o
+usb_serial_putchar                                usb_serial.o
+                                                  xmodem.o
+                                                  prom.o
+usb_serial_putchar_nowait                         usb_serial.o
+usb_serial_set_control                            usb_serial.o
+usb_serial_write                                  usb_serial.o
+                                                  xmodem.o
+                                                  prom.o
+xmodem_fini                                       xmodem.o
+                                                  prom.o
+xmodem_init                                       xmodem.o
+                                                  prom.o
+xmodem_send                                       xmodem.o
+                                                  prom.o

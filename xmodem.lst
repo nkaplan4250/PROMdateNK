@@ -1,0 +1,356 @@
+   1               		.file	"xmodem.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.text
+   9               	.Ltext0:
+  10               		.cfi_sections	.debug_frame
+  11               		.section	.text.xmodem_send,"ax",@progbits
+  12               	.global	xmodem_send
+  14               	xmodem_send:
+  15               	.LFB7:
+  16               		.file 1 "xmodem.c"
+   1:xmodem.c      **** /**
+   2:xmodem.c      ****  * \file xmodem protocol
+   3:xmodem.c      ****  *
+   4:xmodem.c      ****  * Using USB serial
+   5:xmodem.c      ****  */
+   6:xmodem.c      **** 
+   7:xmodem.c      **** #include <avr/io.h>
+   8:xmodem.c      **** #include <avr/pgmspace.h>
+   9:xmodem.c      **** #include <avr/interrupt.h>
+  10:xmodem.c      **** #include <stdint.h>
+  11:xmodem.c      **** #include <string.h>
+  12:xmodem.c      **** #include <util/delay.h>
+  13:xmodem.c      **** #include "usb_serial.h"
+  14:xmodem.c      **** #include "xmodem.h"
+  15:xmodem.c      **** 
+  16:xmodem.c      **** 
+  17:xmodem.c      **** 
+  18:xmodem.c      **** /** Send a block.
+  19:xmodem.c      ****  * Compute the checksum and complement.
+  20:xmodem.c      ****  *
+  21:xmodem.c      ****  * \return 0 if all is ok, -1 if a cancel is requested or more
+  22:xmodem.c      ****  * than 10 retries occur.
+  23:xmodem.c      ****  */
+  24:xmodem.c      **** int
+  25:xmodem.c      **** xmodem_send(
+  26:xmodem.c      **** 	xmodem_block_t * const block
+  27:xmodem.c      **** )
+  28:xmodem.c      **** {
+  17               		.loc 1 28 0
+  18               		.cfi_startproc
+  19               	.LVL0:
+  20 0000 1F93      		push r17
+  21               	.LCFI0:
+  22               		.cfi_def_cfa_offset 3
+  23               		.cfi_offset 17, -2
+  24 0002 CF93      		push r28
+  25               	.LCFI1:
+  26               		.cfi_def_cfa_offset 4
+  27               		.cfi_offset 28, -3
+  28 0004 DF93      		push r29
+  29               	.LCFI2:
+  30               		.cfi_def_cfa_offset 5
+  31               		.cfi_offset 29, -4
+  32               	/* prologue: function */
+  33               	/* frame size = 0 */
+  34               	/* stack size = 3 */
+  35               	.L__stack_usage = 3
+  36 0006 EC01      		movw r28,r24
+  37               	.LVL1:
+  38 0008 FC01      		movw r30,r24
+  39 000a 3396      		adiw r30,3
+  40 000c 9C01      		movw r18,r24
+  41 000e 2D57      		subi r18,125
+  42 0010 3F4F      		sbci r19,-1
+  29:xmodem.c      **** 	// Compute the checksum and complement
+  30:xmodem.c      **** 	uint8_t cksum = 0;
+  43               		.loc 1 30 0
+  44 0012 80E0      		ldi r24,0
+  45               	.LVL2:
+  46               	.L2:
+  47               	.LBB2:
+  31:xmodem.c      **** 	for (uint8_t i = 0 ; i < sizeof(block->data) ; i++)
+  48               		.loc 1 31 0 discriminator 1
+  49 0014 E217      		cp r30,r18
+  50 0016 F307      		cpc r31,r19
+  51 0018 01F0      		breq .L13
+  32:xmodem.c      **** 		cksum += block->data[i];
+  52               		.loc 1 32 0 discriminator 3
+  53 001a 9191      		ld r25,Z+
+  54               	.LVL3:
+  55 001c 890F      		add r24,r25
+  56               	.LVL4:
+  57 001e 00C0      		rjmp .L2
+  58               	.L13:
+  59               	.LBE2:
+  33:xmodem.c      **** 
+  34:xmodem.c      **** 	block->cksum = cksum;
+  60               		.loc 1 34 0
+  61 0020 8083      		st Z,r24
+  35:xmodem.c      **** 	block->block_num++;
+  62               		.loc 1 35 0
+  63 0022 8981      		ldd r24,Y+1
+  64               	.LVL5:
+  65 0024 8F5F      		subi r24,lo8(-(1))
+  66 0026 8983      		std Y+1,r24
+  67               	.LVL6:
+  36:xmodem.c      **** 	block->block_num_complement = 0xFF - block->block_num;
+  68               		.loc 1 36 0
+  69 0028 8095      		com r24
+  70 002a 8A83      		std Y+2,r24
+  71               	.LVL7:
+  37:xmodem.c      **** 
+  38:xmodem.c      **** 	// Send the block, and wait for an ACK
+  39:xmodem.c      **** 	uint8_t retry_count = 0;
+  40:xmodem.c      **** 
+  41:xmodem.c      **** 	while (retry_count++ < 10)
+  72               		.loc 1 41 0
+  73 002c 1BE0      		ldi r17,lo8(11)
+  74               	.LVL8:
+  75               	.L4:
+  76 002e 1150      		subi r17,lo8(-(-1))
+  77               	.LVL9:
+  78 0030 01F0      		breq .L9
+  79               	.LVL10:
+  42:xmodem.c      **** 	{
+  43:xmodem.c      **** 		usb_serial_write((void*) block, sizeof(*block));
+  80               		.loc 1 43 0
+  81 0032 64E8      		ldi r22,lo8(-124)
+  82 0034 70E0      		ldi r23,0
+  83 0036 CE01      		movw r24,r28
+  84 0038 0E94 0000 		call usb_serial_write
+  85               	.LVL11:
+  86               	.L7:
+  87               	.LBB3:
+  44:xmodem.c      **** 
+  45:xmodem.c      **** 		// Wait for an ACK (done), CAN (abort) or NAK (retry)
+  46:xmodem.c      **** 		while (1)
+  47:xmodem.c      **** 		{
+  48:xmodem.c      **** 			uint8_t c = usb_serial_getchar();
+  88               		.loc 1 48 0
+  89 003c 0E94 0000 		call usb_serial_getchar
+  90               	.LVL12:
+  49:xmodem.c      **** 			if (c == XMODEM_ACK)
+  91               		.loc 1 49 0
+  92 0040 8630      		cpi r24,lo8(6)
+  93 0042 01F0      		breq .L10
+  50:xmodem.c      **** 				return 0;
+  51:xmodem.c      **** 			if (c == XMODEM_CAN)
+  94               		.loc 1 51 0
+  95 0044 8831      		cpi r24,lo8(24)
+  96 0046 01F4      		brne .L6
+  97               	.LVL13:
+  98               	.L9:
+  52:xmodem.c      **** 				return -1;
+  99               		.loc 1 52 0
+ 100 0048 8FEF      		ldi r24,lo8(-1)
+ 101 004a 9FEF      		ldi r25,lo8(-1)
+ 102 004c 00C0      		rjmp .L5
+ 103               	.LVL14:
+ 104               	.L6:
+  53:xmodem.c      **** 			if (c == XMODEM_NAK)
+ 105               		.loc 1 53 0
+ 106 004e 8531      		cpi r24,lo8(21)
+ 107 0050 01F4      		brne .L7
+ 108               	.LBE3:
+ 109 0052 00C0      		rjmp .L4
+ 110               	.L10:
+ 111               	.LBB4:
+  50:xmodem.c      **** 				return 0;
+ 112               		.loc 1 50 0
+ 113 0054 80E0      		ldi r24,0
+ 114 0056 90E0      		ldi r25,0
+ 115               	.LVL15:
+ 116               	.L5:
+ 117               	/* epilogue start */
+ 118               	.LBE4:
+  54:xmodem.c      **** 				break;
+  55:xmodem.c      **** 		}
+  56:xmodem.c      **** 	}
+  57:xmodem.c      **** 
+  58:xmodem.c      **** 	// Failure or cancel
+  59:xmodem.c      **** 	return -1;
+  60:xmodem.c      **** }
+ 119               		.loc 1 60 0
+ 120 0058 DF91      		pop r29
+ 121 005a CF91      		pop r28
+ 122               	.LVL16:
+ 123 005c 1F91      		pop r17
+ 124 005e 0895      		ret
+ 125               		.cfi_endproc
+ 126               	.LFE7:
+ 128               		.section	.text.xmodem_init,"ax",@progbits
+ 129               	.global	xmodem_init
+ 131               	xmodem_init:
+ 132               	.LFB8:
+  61:xmodem.c      **** 
+  62:xmodem.c      **** 
+  63:xmodem.c      **** int
+  64:xmodem.c      **** xmodem_init(
+  65:xmodem.c      **** 	xmodem_block_t * const block
+  66:xmodem.c      **** )
+  67:xmodem.c      **** {
+ 133               		.loc 1 67 0
+ 134               		.cfi_startproc
+ 135               	.LVL17:
+ 136               	/* prologue: function */
+ 137               	/* frame size = 0 */
+ 138               	/* stack size = 0 */
+ 139               	.L__stack_usage = 0
+  68:xmodem.c      **** 	block->soh = 0x01;
+ 140               		.loc 1 68 0
+ 141 0000 21E0      		ldi r18,lo8(1)
+ 142 0002 FC01      		movw r30,r24
+ 143 0004 2083      		st Z,r18
+  69:xmodem.c      **** 	block->block_num = 0x00;
+ 144               		.loc 1 69 0
+ 145 0006 1182      		std Z+1,__zero_reg__
+ 146               	.LVL18:
+ 147               	.L16:
+ 148               	.LBB5:
+  70:xmodem.c      **** 
+  71:xmodem.c      **** 	// wait for initial nak
+  72:xmodem.c      **** 	while (1)
+  73:xmodem.c      **** 	{
+  74:xmodem.c      **** 		uint8_t c = usb_serial_getchar();
+ 149               		.loc 1 74 0
+ 150 0008 0E94 0000 		call usb_serial_getchar
+ 151               	.LVL19:
+  75:xmodem.c      **** 		if (c == XMODEM_NAK)
+ 152               		.loc 1 75 0
+ 153 000c 8531      		cpi r24,lo8(21)
+ 154 000e 01F0      		breq .L17
+  76:xmodem.c      **** 			return 0;
+  77:xmodem.c      **** 		if (c == XMODEM_CAN)
+ 155               		.loc 1 77 0
+ 156 0010 8831      		cpi r24,lo8(24)
+ 157 0012 01F4      		brne .L16
+  78:xmodem.c      **** 			return -1;
+ 158               		.loc 1 78 0
+ 159 0014 8FEF      		ldi r24,lo8(-1)
+ 160 0016 9FEF      		ldi r25,lo8(-1)
+ 161               	.LVL20:
+ 162 0018 0895      		ret
+ 163               	.LVL21:
+ 164               	.L17:
+  76:xmodem.c      **** 			return 0;
+ 165               		.loc 1 76 0
+ 166 001a 80E0      		ldi r24,0
+ 167 001c 90E0      		ldi r25,0
+ 168               	.LVL22:
+ 169               	.LBE5:
+  79:xmodem.c      **** 	}
+  80:xmodem.c      **** }
+ 170               		.loc 1 80 0
+ 171 001e 0895      		ret
+ 172               		.cfi_endproc
+ 173               	.LFE8:
+ 175               		.section	.text.xmodem_fini,"ax",@progbits
+ 176               	.global	xmodem_fini
+ 178               	xmodem_fini:
+ 179               	.LFB9:
+  81:xmodem.c      **** 
+  82:xmodem.c      **** 
+  83:xmodem.c      **** int
+  84:xmodem.c      **** xmodem_fini(
+  85:xmodem.c      **** 	xmodem_block_t * const block
+  86:xmodem.c      **** )
+  87:xmodem.c      **** {
+ 180               		.loc 1 87 0
+ 181               		.cfi_startproc
+ 182               	.LVL23:
+ 183               	/* prologue: function */
+ 184               	/* frame size = 0 */
+ 185               	/* stack size = 0 */
+ 186               	.L__stack_usage = 0
+  88:xmodem.c      **** #if 0
+  89:xmodem.c      **** /* Don't send EOF?  rx adds it to the file? */
+  90:xmodem.c      **** 	block->block_num++;
+  91:xmodem.c      **** 	memset(block->data, XMODEM_EOF, sizeof(block->data));
+  92:xmodem.c      **** 	if (xmodem_send_block(block) < 0)
+  93:xmodem.c      **** 		return;
+  94:xmodem.c      **** #endif
+  95:xmodem.c      **** 
+  96:xmodem.c      **** 	// File transmission complete.  send an EOT
+  97:xmodem.c      **** 	// wait for an ACK or CAN
+  98:xmodem.c      **** 	while (1)
+  99:xmodem.c      **** 	{
+ 100:xmodem.c      **** 		usb_serial_putchar(XMODEM_EOT);
+ 187               		.loc 1 100 0
+ 188 0000 84E0      		ldi r24,lo8(4)
+ 189               	.LVL24:
+ 190 0002 0E94 0000 		call usb_serial_putchar
+ 191               	.LVL25:
+ 192               	.L24:
+ 193               	.LBB6:
+ 101:xmodem.c      **** 
+ 102:xmodem.c      **** 		while (1)
+ 103:xmodem.c      **** 		{
+ 104:xmodem.c      **** 			uint16_t c = usb_serial_getchar();
+ 194               		.loc 1 104 0
+ 195 0006 0E94 0000 		call usb_serial_getchar
+ 196               	.LVL26:
+ 105:xmodem.c      **** 			if (c == -1)
+ 197               		.loc 1 105 0
+ 198 000a 8F3F      		cpi r24,-1
+ 199 000c 2FEF      		ldi r18,-1
+ 200 000e 9207      		cpc r25,r18
+ 201 0010 01F0      		breq .L24
+ 106:xmodem.c      **** 				continue;
+ 107:xmodem.c      **** 			if (c == XMODEM_ACK)
+ 202               		.loc 1 107 0
+ 203 0012 8630      		cpi r24,6
+ 204 0014 9105      		cpc r25,__zero_reg__
+ 205 0016 01F0      		breq .L22
+ 108:xmodem.c      **** 				return 0;
+ 109:xmodem.c      **** 			if (c == XMODEM_CAN)
+ 206               		.loc 1 109 0
+ 207 0018 4897      		sbiw r24,24
+ 208 001a 01F4      		brne .L24
+ 110:xmodem.c      **** 				return -1;
+ 209               		.loc 1 110 0
+ 210 001c 8FEF      		ldi r24,lo8(-1)
+ 211 001e 9FEF      		ldi r25,lo8(-1)
+ 212               	.LVL27:
+ 213 0020 0895      		ret
+ 214               	.LVL28:
+ 215               	.L22:
+ 108:xmodem.c      **** 				return 0;
+ 216               		.loc 1 108 0
+ 217 0022 80E0      		ldi r24,0
+ 218 0024 90E0      		ldi r25,0
+ 219               	.LVL29:
+ 220               	.LBE6:
+ 111:xmodem.c      **** 		}
+ 112:xmodem.c      **** 	}
+ 113:xmodem.c      **** }
+ 221               		.loc 1 113 0
+ 222 0026 0895      		ret
+ 223               		.cfi_endproc
+ 224               	.LFE9:
+ 226               		.text
+ 227               	.Letext0:
+ 228               		.file 2 "/usr/lib/avr/include/stdint.h"
+ 229               		.file 3 "xmodem.h"
+ 230               		.file 4 "usb_serial.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 xmodem.c
+     /tmp/ccELA5L2.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccELA5L2.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccELA5L2.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccELA5L2.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/ccELA5L2.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccELA5L2.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccELA5L2.s:14     .text.xmodem_send:0000000000000000 xmodem_send
+     /tmp/ccELA5L2.s:131    .text.xmodem_init:0000000000000000 xmodem_init
+     /tmp/ccELA5L2.s:178    .text.xmodem_fini:0000000000000000 xmodem_fini
+
+UNDEFINED SYMBOLS
+usb_serial_write
+usb_serial_getchar
+usb_serial_putchar
