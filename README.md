@@ -6,8 +6,8 @@ Tramell Hudson's repo https://github.com/osresearch/prom
 Last commit: Mar 10, 2017
 28d746169d6f328b415295b037a696ce3a58ec96
 
-Both of which were downloaded to a Linux VM that was setup for use and testing of the PROMdate i was building.
-It contains everything I needed or thought I might
+Both of which were downloaded to a Linux VM that was setup for use and testing of the PROMdate I was building.
+It contains everything I needed or thought I might, which may or may not have turned out to be true
 
 I have added support of AtMega328P (as of March 2019)
 and added Documentation and Resources folder which contains some additional instructions for programing the Teensy++ and use of the PROMdate (though these are spesic to my VM which i would be happy to share just make a pull request or something)
