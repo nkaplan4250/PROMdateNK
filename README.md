@@ -1,3 +1,17 @@
+This repo was originally downloaded to the Linux VM for use of the PROMdate. 
+It is based on repo https://github.com/0x0dada/PROMDATE 
+Last commit: Dec 4, 2017 
+95fb16e226e3e1d920e0575aefe1d5346fb1acd7
+
+I have added support of AtMega328P (as of March 2019)
+and added Documentation and Resources folder which contains some additional instructions for programing the Teensy++ and use of the PROMdate (though these are spesic to my VM which i would be happy to share just make a pull request or something)
+
+#####{Read it here} (Resources/Documentation/PROMdate_instructions.md)
+
+Thank you so much to 0x0dada _(whoever you are)_, Tramell Hudson, and everyone else who has helped put this together!!!! 
+
+---
+
 This repo is based upon a fork (which has been reset to commit
 150223f2b7c302cb04e4cfbb7c424cfa99576c01) of Trammel Hudson's et. al
 excellent PROMdate project.
