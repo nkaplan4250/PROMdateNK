@@ -6,7 +6,7 @@ Last commit: Dec 4, 2017
 I have added support of AtMega328P (as of March 2019)
 and added Documentation and Resources folder which contains some additional instructions for programing the Teensy++ and use of the PROMdate (though these are spesic to my VM which i would be happy to share just make a pull request or something)
 
-#####[Read it here](Resources/Documentation/PROMdate_instructions.md)
+[Read it here](Resources/Documentation/PROMdate_instructions.md)
 
 Thank you so much to 0x0dada _(whoever you are)_, Tramell Hudson, and everyone else who has helped put this together!!!! 
 
