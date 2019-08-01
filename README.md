@@ -14,9 +14,15 @@ and added Resources and Documentation folders which contain some additional inst
 using of the PROMdate   
 (though these are specific to my VM which i would be happy to share just make a pull request or something)  
 
-### [Read it here](Resources/Documentation/PROMdate_instructions.md)
+### [Read it here](Resources/Documentation/PROMdate_instructions.md)  
 
-Thank you so much to 0x0dada _(whoever you are)_, Tramell Hudson, and everyone else who has helped put this together!!!! 
+Thank you so much to 0x0dada _(whoever you are)_,  
+Tramell Hudson,  
+and everyone else who has helped put this together!!!!   
+
+------------
+
+Below is the orignal README
 
 -----------
 
