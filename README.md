@@ -12,7 +12,7 @@ It contains everything I needed or thought I might, which may or may not have tu
 I have added support of AtMega328P (as of March 2019) 
 and added Resources and Documentation folders which contain some additional instructions for  
 using of the PROMdate   
-(though these are specific to my VM which i would be happy to share just make a pull request or something)  
+(though these maybe specific to my VM which i would be happy to share just make a pull request or something)  
 
 ### [Read it here](Resources/Documentation/PROMdate_instructions.md)  
 
